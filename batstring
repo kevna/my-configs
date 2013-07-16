@@ -19,7 +19,7 @@ else
 				returnString="\e[5;91m"
 			else
 				#use plain red colour
-				returnString="\e[0;31m"
+				returnString="\e[0;91m"
 			fi
 		else
 			#use plain blue colour
