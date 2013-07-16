@@ -20,11 +20,12 @@ export EDITOR="vim"
 export PATH=${PATH}:~/scripts
 
 #modify prompt
+lineCol="\[\e[0;37m\]"
 #hack to get errorcode after $(script) execution
 export PROMPT_COMMAND="es=\$?"
-export PS1="\[\e[0;37m\]\u\[\e[0;32m\]@\[\e[1;32m\]\h\[\e[0;37m\][\$(/home/aaron/.batstring)\[\e[0;37m\]]\[\e[0;34m\]:\[\e[1;34m\]\w \
-\$(if [[ \$es == 0 ]]; then echo \"\[\e[1;32m\]\342\234\223\"; else echo \"\[\e[0;91m\]\$es\"; fi)\[\e[m\]\$ "
-
+export PS1="\[\e[1;37m\]\u${lineCol}(\[\e[0;36m\]\l${lineCol}:\[\e[0;35m\]\j${lineCol})\[\e[0;32m\]@\[\e[1;32m\]\H${lineCol}[\$(/home/aaron/.batstring)${lineCol}]\[\e[0;34m\]:\[\e[1;34m\]\w 
+${lineCol}\342\224\224\$(if [[ \$es == 0 ]]; then echo \"\[\e[1;32m\]\342\234\223\"; else echo \"\[\e[0;91m\]\$es\"; fi)${lineCol}\342\224\200\!\342\224\200\342\225\274\[\e[m\]"
+unset lineCol
 #echo attached display (or no display)
 if [ "$DISPLAY" == "" ]; then
         echo "No Display attached."
