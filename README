@@ -1,1 +1,4 @@
-My arch linux configuration files.
+My arch linux configuration files for openbox, bash, tmux & vim.
+
+A wealth on information on configuring bashrc can be found on the arch wiki: https://wiki.archlinux.org/index.php/Color_Bash_Prompt
+
