@@ -1,16 +1,17 @@
 #!/bin/bash
+#script by Aaron Moore (Kevna), all rights reserved
 
 #get battery level and state
 batValue=$(acpi -b | awk '{print $4}' | sed "s/[^0-9]//g")
 batState=$(acpi -b | awk '{print $3}' | sed "s/[^a-Z]//g")
 
 #if battery is charging
-if [ $batState == "Charging" ]; then
+if [ "$batState" == "Charging" ]; then
 	#use bold blue colour
 	returnString="\e[1;36m"
 else
 	#of battery is discharging
-	if [ $batState == "Discharging" ]; then
+	if [ "$batState" == "Discharging" ]; then
 		#if less than 1/4 remain
 		if [ $batValue -lt 25 ]; then
 			#if it's less than 10%
