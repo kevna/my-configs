@@ -6,7 +6,7 @@ batValue=$(acpi -b | awk '{print $4}' | sed "s/[^0-9]//g")
 batState=$(acpi -b | awk '{print $3}' | sed "s/[^a-Z]//g")
 
 #default return bold white
-returString="\e[1;37m"
+returnString="\e[1;37m"
 
 #if battery is charging
 if [ "$batState" == "Charging" ]; then
