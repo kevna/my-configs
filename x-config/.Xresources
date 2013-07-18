@@ -1,0 +1,36 @@
+#window transparancy
+URxvt*depth:		32
+URxvt*background:	[80]#000000
+#color scheme adjustments
+URxvt*foreground:	    #E2A302
+	URxvt*color2:	#009900
+	URxvt*color4:	#3465A4
+	URxvt*color12:	#729FCF
+	
+#font settings
+URxvt*font: xft:DejaVu Sans Mono:size=9
+#set Icon
+URxvt*iconFile: /usr/share/icons/gnome/scalable/apps/utilities-terminal-symbolic.svg
+
+#scroll settings
+URxvt*scrollBar_right:	true
+URxvt*scrollstyle:	plain
+URxvt*scrollTtyOutput:	false
+URxvt*scrollWithBuffer:	true
+URxvt*scrollTtyKeypress:true
+#history limit
+URxvt*saveLines:	1024
+
+#disable perl extensions (excepting matcher, fullscreen and vtwheel)
+URxvt*perl-ext:
+URxvt*perl-ext-common:	matcher,fullscreen,vtwheel
+#extention config
+#	keyshortcut for fullscreen
+	URxvt*keysym.F11:	perl:fullscreen:switch
+#	browser to launch urls (matcher)
+	URxvt*url-launcher:	/usr/bin/firefox
+#	mouse button to open links (matcher)
+	URxvt*matcher.button:	1
+#	colour to colour matched URIs (matcher)
+	URxvt*colorUL:		#4682B4
+
