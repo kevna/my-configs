@@ -1,0 +1,25 @@
+URxvt*depth:		32
+URxvt*background:	[75]#000000
+URxvt*foreground:	    #E2A302
+	URxvt*color2:	#009900
+	URxvt*color4:	#3465A4
+	URxvt*color12:	#729FCF
+	
+URxvt*font: xft:DejaVu Sans Mono:size=9
+
+URxvt*iconFile: /usr/share/icons/gnome/scalable/apps/utilities-terminal-symbolic.svg
+
+URxvt*scrollBar_right:	true
+URxvt*scrollstyle:	plain
+URxvt*scrollTtyOutput:	false
+URxvt*scrollWithBuffer:	true
+URxvt*scrollTtyKeypress:true
+URxvt*saveLines:	1024
+
+URxvt*perl-ext:
+URxvt*perl-ext-common:	matcher,fullscreen,vtwheel
+URxvt*keysym.F11:	perl:fullscreen:switch
+URxvt*url-launcher:	/usr/bin/firefox
+URxvt*matcher.button:	1
+URxvt*colorUL:		#4682B4
+
