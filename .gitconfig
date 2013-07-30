@@ -1,0 +1,9 @@
+[user]
+	name = kevna
+	email = aam13@aber.ac.uk
+[credential]
+	helper = cache
+[core]
+	editor = vim
+[color]
+	ui = always
