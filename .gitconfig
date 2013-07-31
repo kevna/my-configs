@@ -6,7 +6,12 @@
 [credential]
 	helper = cache
 [core]
+	#use vim for default editor
 	editor = vim
+	#ensure symilnks = true (should be default behaviour)
 	symlinks = true
+	#customize the way git treats whitespace in files
+	whitespace = blank-at-eol, cr-at-eol, space-before-tab
+#turn on colours in CLI (uses default colours)
 [color]
 	ui = true
