@@ -1,36 +1,57 @@
-#window transparancy
+!Xft (X font config)
+Xft*dpi:	96
+Xft*antialias:	false
+Xft*hinting:	false
+
+!URxvt settings
+!title
+URxvt*title:	Terminal
+!window transparancy
 URxvt*depth:		32
 URxvt*background:	[80]#000000
-#color scheme adjustments
+!fading (on defocus)
+URxvt*fading:		20
+URxvt*fadeColor:	[80]#002B36
+!bell settings
+URxvt*visualBell:	true
+!color scheme adjustments
 URxvt*foreground:	    #E2A302
 	URxvt*color2:	#009900
 	URxvt*color4:	#3465A4
 	URxvt*color12:	#729FCF
-	
-#font settings
-URxvt*font: xft:DejaVu Sans Mono:size=9
-#set Icon
-URxvt*iconFile: /usr/share/icons/gnome/scalable/apps/utilities-terminal-symbolic.svg
 
-#scroll settings
+!font settings
+URxvt*font: xft:DejaVu Sans Mono:pixelsize=12
+URxvt*letterSpace:	-1
+
+URxvt*iconFile: /usr/share/icons/gnome/scalable/apps/utilities-terminal-symbolic.svg
+!URxvt*cursorBlink:	true
+!URxvt*cursorUnderline:	true
+!hide Xcursor on type
+URxvt*pointerBlank:	true
+
+!window shape
+URxvt*geometry:		92x23
+!scroll settings
 URxvt*scrollBar_right:	true
 URxvt*scrollstyle:	plain
 URxvt*scrollTtyOutput:	false
 URxvt*scrollWithBuffer:	true
 URxvt*scrollTtyKeypress:true
-#history limit
-URxvt*saveLines:	1024
+!URxvt*scrollBar:	false
+!history limit
+URxvt*saveLines:	512
 
-#disable perl extensions (excepting matcher, fullscreen and vtwheel)
+!disable perl extensions (excepting matcher, fullscreen and vtwheel)
 URxvt*perl-ext:
 URxvt*perl-ext-common:	matcher,fullscreen,vtwheel
-#extention config
-#	keyshortcut for fullscreen
+!extention config
+!	keyshortcut for fullscreen
 	URxvt*keysym.F11:	perl:fullscreen:switch
-#	browser to launch urls (matcher)
+!	browser to launch urls (matcher)
 	URxvt*url-launcher:	/usr/bin/firefox
-#	mouse button to open links (matcher)
+!	mouse button to open links (matcher)
 	URxvt*matcher.button:	1
-#	colour to colour matched URIs (matcher)
+!	colour to colour matched URIs (matcher)
 	URxvt*colorUL:		#4682B4
 
