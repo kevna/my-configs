@@ -1,7 +1,7 @@
 !Xft (X font config)
 Xft*dpi:	96
-Xft*antialias:	false
-Xft*hinting:	false
+Xft*antialias:	true
+Xft*hinting:	slight
 
 !URxvt settings
 !title
