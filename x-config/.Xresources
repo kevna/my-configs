@@ -14,6 +14,7 @@ URxvt*fading:		20
 URxvt*fadeColor:	[80]#002B36
 !bell settings
 URxvt*visualBell:	true
+URxvt*urgentOnBell:	true
 !color scheme adjustments
 URxvt*foreground:	    #E2A302
 	URxvt*color2:	#009900
@@ -53,5 +54,7 @@ URxvt*perl-ext-common:	matcher,fullscreen,vtwheel
 !	mouse button to open links (matcher)
 	URxvt*matcher.button:	1
 !	colour to colour matched URIs (matcher)
-	URxvt*colorUL:		#4682B4
+	URxvt*colorUL:		CornflowerBlue
+!#4682B4
+	URxvt*underlineColor:	MidnightBlue
 
