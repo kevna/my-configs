@@ -22,7 +22,7 @@ URxvt*foreground:	    #E2A302
 	URxvt*color12:	#729FCF
 
 !font settings
-URxvt*font: xft:DejaVu Sans Mono:pixelsize=12
+URxvt*font: xft:DejaVu Sans Mono:pixelsize=12,xft:Luxi Mono
 URxvt*letterSpace:	-1
 
 URxvt*iconFile: /usr/share/icons/gnome/scalable/apps/utilities-terminal-symbolic.svg
