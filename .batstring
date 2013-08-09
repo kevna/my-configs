@@ -12,23 +12,21 @@ returnString="\e[1;37m"
 if [ "$batState" == "Charging" ]; then
 	#use bold blue colour
 	returnString="\e[1;36m"
-else
-	#of battery is discharging
-	if [ "$batState" == "Discharging" ]; then
-		#if less than 1/4 remain
-		if [ $batValue -lt 25 ]; then
-			#if it's less than 10%
-			if [ $batValue -lt 10 ]; then
-				#use flashing high-intensity red colour
-				returnString="\e[5;91m"
-			else
-				#use plain red colour
-				returnString="\e[0;91m"
-			fi
+#else if battery is discharging
+elif [ "$batState" == "Discharging" ]; then
+	#if less than 1/4 remain
+	if [ $batValue -lt 25 ]; then
+		#if it's less than 10%
+		if [ $batValue -lt 10 ]; then
+			#use flashing high-intensity red colour
+			returnString="\e[5;91m"
 		else
-			#use plain blue colour
-			returnString="\e[0;36m"
+			#use plain red colour
+			returnString="\e[0;91m"
 		fi
+	else
+		#use plain blue colour
+		returnString="\e[0;36m"
 	fi
 fi
 
