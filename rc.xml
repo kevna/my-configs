@@ -194,9 +194,19 @@
         <command>/home/aaron/.urxvtq/urxvtc</command>
       </action>
     </keybind>
+    <keybind key="W-c">
+      <action name="Execute">
+        <command>/home/aaron/.urxvtq/urxvtc -e ssh central</command>
+      </action>
+    </keybind>
+    <keybind key="W-x">
+      <action name="Execute">
+        <command>/home/aaron/.urxvtq/urxvtc -e ssh -X central</command>
+      </action>
+    </keybind>
     <keybind key="Print">
       <action name="Execute">
-        <command>bash -c "xwd | convert - /tmp/screenshot-$(date +%s).png"</command>
+        	<command>bash -c "xwd | convert - /tmp/screenshot-$(date +%s).png"</command>
       </action>
     </keybind>
     <keybind key="C-Print">
