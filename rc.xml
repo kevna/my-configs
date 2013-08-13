@@ -239,8 +239,8 @@
       </action>
     </keybind>
     <keybind key="W-Left">
-      <action name="UnmaximizeFull" />
-      <action name="MaximizeVert" />
+      <action name="UnmaximizeFull"/>
+      <action name="MaximizeVert"/>
       <action name="MoveResizeTo">
         <width>50%</width>
       </action>
@@ -249,8 +249,8 @@
       </action>
     </keybind>
     <keybind key="W-Right">
-      <action name="UnmaximizeFull" />
-      <action name="MaximizeVert" />
+      <action name="UnmaximizeFull"/>
+      <action name="MaximizeVert"/>
       <action name="MoveResizeTo">
         <width>50%</width>
       </action>
@@ -285,15 +285,19 @@
         </then>
         <else>
           <action name="If">
-            <maximized>yes</maximized>
+            <maximized>no</maximized>
+            <maximizedvertical>no</maximizedvertical>
             <then>
-              <action name="Unmaximize"/>
+              <action name="ToggleShade"/>
             </then>
             <else>
-              <action name="ToggleShade"/>
+              <action name="Unmaximize"/>
             </else>
           </action>
         </else>
+	<else>
+	  <action name="Unshade" />
+	</else>
       </action>
     </keybind>
     <keybind key="W-space">
