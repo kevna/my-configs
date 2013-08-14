@@ -32,7 +32,7 @@ URxvt*iconFile: /usr/share/icons/gnome/scalable/apps/utilities-terminal-symbolic
 URxvt*pointerBlank:	true
 
 !window shape
-URxvt*geometry:		92x23
+URxvt*geometry:		97x25
 !scroll settings
 URxvt*scrollBar_right:	true
 URxvt*scrollstyle:	plain
