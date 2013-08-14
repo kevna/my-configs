@@ -10,8 +10,9 @@ URxvt*title:	Terminal
 URxvt*depth:		32
 URxvt*background:	[80]#000000
 !fading (on defocus)
-URxvt*fading:		20
-URxvt*fadeColor:	[80]#002B36
+URxvt*fading:		40
+!URxvt*fadeColor:	#002B36
+URxvt*fadeColor:	#363636
 !bell settings
 URxvt*visualBell:	true
 URxvt*urgentOnBell:	true
