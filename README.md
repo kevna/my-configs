@@ -3,11 +3,9 @@ Arch Linux Configuration
 
 My arch linux configuration files for openbox, bash, tmux & vim.
 
-
 An Example of my two line bash prompt can be seen in "terminal-screenshot.png".
-The prompt can be read as follows:
-
-user(virtualTerminal:backgroundProcessCount)@hostname[battery]:directory ∓
+The prompt can be read as follows:<br />
+user(virtualTerminal:backgroundProcessCount)@hostname[battery]:directory ∓<br />
 \-errorCode-historyNumber--
 
 Where the battery value is colour coded:
