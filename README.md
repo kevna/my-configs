@@ -46,6 +46,8 @@ and the error code is replaced with a green tick if 0 (clean exit).
 
 A wealth of information on configuring and colouring bash prompts can be found on the [ArchWiki] [2]
 
+### .batstring
+
 [1]: https://wiki.archlinux.org/index.php/Rxvt-unicode#Improved_Kuake-like_Behavior_in_Openbox
 [2]: https://wiki.archlinux.org/index.php/Color_Bash_Prompt
 
