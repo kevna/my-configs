@@ -74,7 +74,6 @@ In order to use the scheme with vim in my terminal sessions with transparency I 
 This is done by setting:
 ```vimL
 hi normal ctermbg=NONE
-
 ```
 
 [1]: https://wiki.archlinux.org/index.php/Rxvt-unicode#Improved_Kuake-like_Behavior_in_Openbox
