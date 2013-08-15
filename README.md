@@ -1,7 +1,7 @@
 Arch Linux Configuration
 ========================
 
-My arch linux configuration files for openbox, bash, tmux & vim.
+My arch linux configuration files for openbox, bash, git, tmux & vim.
 
 rc.xml
 ------
@@ -50,6 +50,34 @@ For quick reading the battery value is colour coded:
 * bold cyan  - charging
 (bold white is also used to catch other battery states that may occur)
 
+.vim & .vimrc
+-------------
+In order to maintain clarity in my .vimrc file I have outsourced some of my vim configuration to files at .vim/plugin/config-\* as .vim/plugin is also sourced upon vim startup.
+
+### .vim/plugin/config-functions.vim
+Currently this file contains two functions:
+* WordCount allows me to see a count of words in the current file (used in my status line)
+* NERDTreeQuit is a hack to auto-close the NERDTree plugin if it is the last window to remain open
+
+### .vim/plugin/config-keymaps.vim
+This file holds all the keymaps I use in my vim configuration:
+* insert mode
+	- jj switches to command mode (w)rites the file
+* command mode
+	- w!! writes the file using the 'write as sudo' hack
+	- wt writes the file and automatically compiles it using my [comptex script] [3]
+	- tt toggles Tlist on or off
+
+### .vim/colors/candycode.vim
+In majority this is the standard candycode color scheme which is designed for use with gvim.
+In order to use the scheme with vim in my terminal sessions with transparency I had to remove the background color setting that is otherwise overlaid on the background.
+This is done by setting:
+```vimL
+hi normal ctermbg=NONE
+
+```
+
 [1]: https://wiki.archlinux.org/index.php/Rxvt-unicode#Improved_Kuake-like_Behavior_in_Openbox
 [2]: https://wiki.archlinux.org/index.php/Color_Bash_Prompt
+[3]: https://github.com/kevna/my-scripts#comptex
 
