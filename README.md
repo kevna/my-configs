@@ -69,7 +69,7 @@ This file holds all the keymaps I use in my vim configuration:
 	- tt toggles Tlist on or off
 
 ### .vim/colors/candycode.vim
-In majority this is the standard candycode color scheme which is designed for use with gvim.
+In majority this is the standard [candycode] [4] color scheme which is designed for use with gvim.
 In order to use the scheme with vim in my terminal sessions with transparency I had to remove the background color setting that is otherwise overlaid on the background.
 This is done by setting:
 ```vimL
@@ -80,4 +80,5 @@ hi normal ctermbg=NONE
 [1]: https://wiki.archlinux.org/index.php/Rxvt-unicode#Improved_Kuake-like_Behavior_in_Openbox
 [2]: https://wiki.archlinux.org/index.php/Color_Bash_Prompt
 [3]: https://github.com/kevna/my-scripts#comptex
+[4]: https://github.com/vim-scripts/candycode.vim
 
