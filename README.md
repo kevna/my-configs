@@ -6,8 +6,10 @@ My arch linux configuration files for openbox, bash, tmux & vim.
 
 An Example of my two line bash prompt can be seen in "terminal-screenshot.png".
 The prompt can be read as follows:
+
 user(virtualTerminal:backgroundProcessCount)@hostname[battery]:directory ∓
 \-errorCode-historyNumber--
+
 Where the battery value is colour coded:
 * bold white - full
 * plain cyan - discharging
@@ -15,6 +17,7 @@ Where the battery value is colour coded:
 * flash red  - danger (< 10%)
 * bold cyan  - charging
 (bold white is also used to catch other battery states that may occur)
+
 The ∓ flag (git logo) appears when the present working directory is a git repo,
 and the error code is replaced with a green tick if 0 (clean exit).
 
