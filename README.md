@@ -33,20 +33,22 @@ The prompt can be read as follows:<br />
 user(virtualTerminal:backgroundProcessCount)@hostname[battery]:directory ∓<br />
 |-errorCode-historyNumber--
 
-Where the battery value is colour coded:
-* bold white - full
-* plain cyan - discharging
-* plain red  - low (< 1/4)
-* flash red  - danger (< 10%)
-* bold cyan  - charging
-(bold white is also used to catch other battery states that may occur)
-
+The battery information is gathered using the external script .batstring.
 The ∓ flag (git logo) appears when the present working directory is a git repo,
 and the error code is replaced with a green tick if 0 (clean exit).
 
 A wealth of information on configuring and colouring bash prompts can be found on the [ArchWiki] [2]
 
 ### .batstring
+~/.batstring is a simple script only used by my bash prompt.
+It uses acpi to capture the battery state as a percentage remaining charge.
+For quick reading the battery value is colour coded:
+* bold white - full
+* plain cyan - discharging
+* plain red  - low (< 1/4)
+* flash red  - danger (< 10%)
+* bold cyan  - charging
+(bold white is also used to catch other battery states that may occur)
 
 [1]: https://wiki.archlinux.org/index.php/Rxvt-unicode#Improved_Kuake-like_Behavior_in_Openbox
 [2]: https://wiki.archlinux.org/index.php/Color_Bash_Prompt
