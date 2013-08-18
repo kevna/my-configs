@@ -5,7 +5,7 @@ Xft*hinting:	slight
 
 !URxvt settings
 !title
-URxvt*title:	Terminal
+!URxvt*title:	Terminal
 !window transparancy
 URxvt*depth:		32
 URxvt*background:	[80]#000000
