@@ -2,6 +2,8 @@
 [user]
 	name = kevna
 	email = aam13@aber.ac.uk
+[github]
+	user = kevna
 #credential helper (auto-generated)
 [credential]
 	helper = cache
@@ -15,3 +17,8 @@
 #turn on colours in CLI (uses default colours)
 [color]
 	ui = true
+[alias]
+	s = status -s
+#autocorrect
+[help]
+	autocorrect = 1
