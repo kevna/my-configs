@@ -12,10 +12,10 @@
        apply -->
     <followMouse>yes</followMouse>
     <!-- move focus to a window when you move the mouse into it -->
-    <focusLast>yes</focusLast>
+    <focusLast>no</focusLast>
     <!-- focus the last used window when changing desktops, instead of the one
        under the mouse pointer. when followMouse is enabled -->
-    <underMouse>no</underMouse>
+    <underMouse>yes</underMouse>
     <!-- move focus under the mouse, even when the mouse is not moving -->
     <focusDelay>200</focusDelay>
     <!-- when followMouse is enabled, the mouse must be inside the window for
@@ -206,7 +206,7 @@
     </keybind>
     <keybind key="Print">
       <action name="Execute">
-        	<command>bash -c "xwd | convert - /tmp/screenshot-$(date +%s).png"</command>
+        <command>bash -c "xwd | convert - /tmp/screenshot-$(date +%s).png"</command>
       </action>
     </keybind>
     <keybind key="C-Print">
@@ -295,9 +295,9 @@
             </else>
           </action>
         </else>
-	<else>
-	  <action name="Unshade" />
-	</else>
+        <else>
+          <action name="Unshade"/>
+        </else>
       </action>
     </keybind>
     <keybind key="W-space">
@@ -567,7 +567,7 @@
           <shaded>no</shaded>
           <then>
             <action name="Shade"/>
-	    <!--<action name="FocusToBottom"/>
+            <!--<action name="FocusToBottom"/>
             <action name="Unfocus"/>
 	    <action name="Lower"/>-->
           </then>
