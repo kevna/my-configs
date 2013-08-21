@@ -429,6 +429,7 @@
     <!-- Keybindings for window switching -->
     <keybind key="A-Tab">
       <action name="NextWindow">
+        <dialog>icons</dialog>
         <bar>no</bar>
         <raise>yes</raise>
         <finalactions>
@@ -440,6 +441,7 @@
     </keybind>
     <keybind key="A-S-Tab">
       <action name="PreviousWindow">
+        <dialog>icons</dialog>
         <bar>no</bar>
 	<raise>yes</raise>
         <finalactions>
