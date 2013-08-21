@@ -30,11 +30,13 @@ Features in my rc.xml include:
 -------
 An example of my two line bash prompt can be seen in "terminal-screenshot.png".<br />
 The prompt can be read as follows:<br />
-user(virtualTerminal:backgroundProcessCount)@hostname[battery]:directory ∓<br />
+user(virtualTerminal:backgroundProcessCount)@hostname[battery]:directory ∓branch(changes)<br />
 |-errorCode-historyNumber--
 
 The battery information is gathered using the external script .batstring.
 The ∓ flag (git logo) appears when the present working directory is a git repo,
+when it appears it is followed by the name of the currently active branch and
+(in the brackets) the number of un-commited changes.
 and the error code is replaced with a green tick if 0 (clean exit).
 
 A wealth of information on configuring and colouring bash prompts can be found on the [ArchWiki] [2]
