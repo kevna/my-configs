@@ -429,6 +429,8 @@
     <!-- Keybindings for window switching -->
     <keybind key="A-Tab">
       <action name="NextWindow">
+        <bar>no</bar>
+        <raise>yes</raise>
         <finalactions>
           <action name="Focus"/>
           <action name="Raise"/>
@@ -438,6 +440,8 @@
     </keybind>
     <keybind key="A-S-Tab">
       <action name="PreviousWindow">
+        <bar>no</bar>
+	<raise>yes</raise>
         <finalactions>
           <action name="Focus"/>
           <action name="Raise"/>
