@@ -1,10 +1,12 @@
 "vim config
 
+set nocompatible	"don't use vi compatibility
 set mouse=a	"enable mouse interaction
 syntax enable 	"activate syntax hilighting
 set showmode	"always show mode
 set autoread	"watch for file changes
 set number	"turn line numbering on
+set cursorline	"show line of cursor
 set lazyredraw 	"only redraw when neccessary
 set scrolloff=7		"padding for vertical scroll
 set sidescrolloff=1	"padding for horizontal scroll
@@ -16,7 +18,8 @@ set modeline	"modeline reads settings from the top of a file
 set backupdir=./.backup,.,/tmp	"backupdir controls the destination for backup files (try .backup then ./ else /tmp)
 set directory=./.backup,.,/tmp	"directory controls the destination for swap files
 "setup wildmenu (filename tab completion)
-set wildmode=longest:full	"wildmenu configuration
+"set wildmode=longest:full	"wildmenu configuration (zsh styled)
+set wildmode=list:longest	"wildmenu configuration (bash styled)
 set wildmenu	"turn on wildmenu
 "setup folding (hiding code sections)
 set foldmarker={,}	"set to fold around {} blocks
