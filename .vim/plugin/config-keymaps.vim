@@ -1,11 +1,17 @@
 "vim configuration - keymapping
 "==============================
 
+"maps using leader
+let mapleader = ","
+map <leader>n :NERDTreeToggle %:p:h<CR>
+
 "--------------------------------------------------
 "insert mode keymaps
 
 "map jj in insert mode to write file (save)
 imap jj <esc>:w<CR><ins><Right>
+"map tab to autocomplete wrapper function
+imap <tab> <c-r>=InsertTabWrapper()<CR>
 
 "--------------------------------------------------
 "command keymaps
