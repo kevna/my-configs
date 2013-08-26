@@ -8,9 +8,9 @@ Xft*hinting:	slight
 !URxvt*title:	Terminal
 !window transparancy
 URxvt*depth:		32
-URxvt*background:	[80]#000000
+URxvt*background:	[85]#000000
 !fading (on defocus)
-URxvt*fading:		40
+URxvt*fading:		20
 !URxvt*fadeColor:	#002B36
 URxvt*fadeColor:	#363636
 !bell settings
