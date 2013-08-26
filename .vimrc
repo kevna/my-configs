@@ -1,7 +1,7 @@
 "vim config
 
 set mouse=a	"enable mouse interaction
-syntax on	"activate syntax hilighting
+syntax enable 	"activate syntax hilighting
 set showmode	"always show mode
 set autoread	"watch for file changes
 set number	"turn line numbering on
@@ -31,11 +31,14 @@ set hlsearch		"hilight search matches
 set incsearch		"search incrementaly (match as you type)
 set ignorecase		"case insensitive search
 set smartcase		"search is case sensetive if searchstring contains caps
+"setup 'list'
+set listchars=tab:>\ ,trail:-,precedes:<,extends:>
+set list
 
 filetype on		"filetype detection
 filetype indent on	"filetype specific indentation
 filetype plugin on	"filetype specific plugins
-set omnifunc=syntaxcomplete#Complete "turn on omni complete (use ^X^O to activate)
+"set omnifunc=syntaxcomplete#Complete	"turn on omni complete (use ^X^O to activate)
 
 colorscheme candycode "set colorscheme (candycode)
 
@@ -51,7 +54,7 @@ endif
 "==================================================
 "status line
 set laststatus=2 "show status line
-let &stl=" %.100f%#todo#[%{strlen(&fenc)?&fenc:'NOENC'}%Y]%#error#%r%*"	"status left (file info)
+let &stl=" %.100f %#todo#[%{strlen(&fenc)?&fenc:'NOENC'}%Y]%#error#%r%*"	"status left (file info)
 let &stl.="%=%#error#%m%*%{WordCount()}[%04c|%04l/%04L]%P"	"status right (cursor info)
 
 "==================================================
