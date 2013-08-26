@@ -72,7 +72,7 @@ Currently this file contains two functions:
 ### .vim/plugin/config-keymaps.vim
 This file holds all the keymaps I use in my vim configuration:
 * insert mode
-	- jj switches to command mode (w)rites the file
+	- jj switches to command mode (w)rites the file and returns to insert mode
 	- Tab calls the InsertTabWrapper function for completion (can be bypassed by using Shift-Tab)
 * command mode
 	- w!! writes the file using the 'write as sudo' hack
