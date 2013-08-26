@@ -41,7 +41,7 @@ set list
 filetype on		"filetype detection
 filetype indent on	"filetype specific indentation
 filetype plugin on	"filetype specific plugins
-"set omnifunc=syntaxcomplete#Complete	"turn on omni complete (use ^X^O to activate)
+set omnifunc=syntaxcomplete#Complete	"turn on omni complete (use ^X^O to activate)
 
 colorscheme candycode "set colorscheme (candycode)
 
