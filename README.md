@@ -73,7 +73,7 @@ Currently this file contains two functions:
 This file holds all the keymaps I use in my vim configuration:
 * insert mode
 	- jj switches to command mode (w)rites the file
-	- <tab> calls the InsertTabWrapper function for completion (can be bypassed by using Shift-Tab)
+	- Tab calls the InsertTabWrapper function for completion (can be bypassed by using Shift-Tab)
 * command mode
 	- w!! writes the file using the 'write as sudo' hack
 	- wt writes the file and automatically compiles it using my [comptex script] [3]
