@@ -11,8 +11,9 @@ Features in my rc.xml include:
 * keybind constructs
 	- F12 for [urxvtq] [1]
 	- super-l to lock the computer
-	- super-c to run an ssh session to the server 'central'
+	- super-c to run an ssh session to the server 'central' (using urxvtc)
 	- super-x to do the above with an X forwarding session
+	- super-v to open a vim instance (in urxvtc)
 	- super-e to run thunar (gui file browser)
 	- PrtScr & ctrl-PrtScr for printscreen functionality
 	- fn-key volume controls (& show level using notify-osd)
