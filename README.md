@@ -57,6 +57,12 @@ For quick reading the battery value is colour coded:
 -------------
 In order to maintain clarity in my .vimrc file I have outsourced some of my vim configuration to files at .vim/plugin/config-\* as .vim/plugin is also sourced upon vim startup.
 
+### vim plugins
+The plugins written by other people that I use are as follows:
+* [NERDTree] (http://www.vim.org/scripts/script.php?script_id=1658)
+* [taglist] (http://www.vim.org/scripts/script.php?script_id=273)
+* [AutoClose] (http://www.vim.org/scripts/script.php?script_id=2009)
+
 ### .vim/plugin/config-functions.vim
 Currently this file contains two functions:
 * WordCount allows me to see a count of words in the current file (used in my status line)
