@@ -67,11 +67,13 @@ The plugins written by other people that I use are as follows:
 Currently this file contains two functions:
 * WordCount allows me to see a count of words in the current file (used in my status line)
 * NERDTreeQuit is a hack to auto-close the NERDTree plugin if it is the last window to remain open
+* InsertTabWrapper is a wrapper function for the tab command, if there is text immediately to the left it attempts to complete it, else it inserts a tab character
 
 ### .vim/plugin/config-keymaps.vim
 This file holds all the keymaps I use in my vim configuration:
 * insert mode
 	- jj switches to command mode (w)rites the file
+	- <tab> calls the InsertTabWrapper function for completion (can be bypassed by using Shift-Tab)
 * command mode
 	- w!! writes the file using the 'write as sudo' hack
 	- wt writes the file and automatically compiles it using my [comptex script] [3]
