@@ -33,7 +33,7 @@ function! NERDTreeQuit()
 	
 	for bline in split(buffersoutput, "\n")
 		let m = matchlist(bline, pattern)
-	
+		
 		if (len(m) > 0)
 			if (m[2] =~ '..a..')
 				let windowfound = 1
