@@ -2,24 +2,40 @@
 
 set mouse=a	"enable mouse interaction
 syntax on	"activate syntax hilighting
+set showmode	"always show mode
 set autoread	"watch for file changes
 set number	"turn line numbering on
 set lazyredraw 	"only redraw when neccessary
 set scrolloff=7		"padding for vertical scroll
-set sidescrolloff=7	"padding for horizontal scroll
+set sidescrolloff=1	"padding for horizontal scroll
 set noerrorbells	"no nasty bells
-set undolevels=1000	"1000 undo actions
+set undolevels=100	"100 undo actions
 set nowrap	"turn wrapping off
+set modeline	"modeline reads settings from the top of a file
+"place backup files
+set backupdir=./.backup,.,/tmp	"backupdir controls the destination for backup files (try .backup then ./ else /tmp)
+set directory=./.backup,.,/tmp	"directory controls the destination for swap files
 "setup wildmenu (filename tab completion)
 set wildmode=longest:full	"wildmenu configuration
 set wildmenu	"turn on wildmenu
 "setup folding (hiding code sections)
+set foldmarker={,}	"set to fold around {} blocks
 set foldmethod=indent	"always fold over indentation
 set foldcolumn=1	"force one column to show folding
+"indentation settings
+set autoindent		"indent automatically
+set smartindent		"use smart 'autoindent'
+set noexpandtab		"don't turn tabs into spaces
+"customize search
+set hlsearch		"hilight search matches
+set incsearch		"search incrementaly (match as you type)
+set ignorecase		"case insensitive search
+set smartcase		"search is case sensetive if searchstring contains caps
 
 filetype on		"filetype detection
 filetype indent on	"filetype specific indentation
 filetype plugin on	"filetype specific plugins
+set omnifunc=syntaxcomplete#Complete "turn on omni complete (use ^X^O to activate)
 
 colorscheme candycode "set colorscheme (candycode)
 
