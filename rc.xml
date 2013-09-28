@@ -244,6 +244,26 @@
         <command>/home/aaron/scripts/volnotify.sh</command>
       </action>
     </keybind>
+    <keybind key="XF86AudioPlay">
+      <action name="Execute">
+        <command>control-vlcsocket.sh pause</command>
+      </action>
+    </keybind>
+    <keybind key="XF86AudioStop">
+      <action name="Execute">
+        <command>control-vlcsocket.sh quit</command>
+      </action>
+    </keybind>
+    <keybind key="XF86AudioNext">
+      <action name="Execute">
+        <command>control-vlcsocket.sh next</command>
+      </action>
+    </keybind>
+    <keybind key="XF86AudioPrev">
+      <action name="Execute">
+        <command>control-vlcsocket.sh prev</command>
+      </action>
+    </keybind>
     <keybind key="W-Left">
       <action name="UnmaximizeFull"/>
       <action name="MaximizeVert"/>
@@ -449,7 +469,7 @@
       <action name="PreviousWindow">
         <dialog>icons</dialog>
         <bar>no</bar>
-	<raise>yes</raise>
+        <raise>yes</raise>
         <finalactions>
           <action name="Focus"/>
           <action name="Raise"/>
