@@ -1,5 +1,6 @@
 #start compositor
-xcompmgr -cCfF &
+#xcompmgr -cCfF &
+xcompmgr -cf &
 #start unclutter (hides mouse)
 unclutter &
 #start nitrogen (wallpaper)
