@@ -14,7 +14,7 @@ URxvt*fading:		20
 !URxvt*fadeColor:	#002B36
 URxvt*fadeColor:	#363636
 !bell settings
-URxvt*visualBell:	true
+!URxvt*visualBell:	true
 URxvt*urgentOnBell:	true
 !color scheme adjustments
 URxvt*foreground:	    #E2A302
@@ -41,8 +41,10 @@ URxvt*scrollTtyOutput:	false
 URxvt*scrollWithBuffer:	true
 URxvt*scrollTtyKeypress:true
 !URxvt*scrollBar:	false
-!history limit
-URxvt*saveLines:	512
+!history limit (default 64)
+!URxvt*saveLines:	512
+
+URxvt*pastableTabs:	true
 
 !disable perl extensions (excepting matcher, fullscreen and vtwheel)
 URxvt*perl-ext:
