@@ -264,6 +264,21 @@
         <command>control-vlcsocket.sh prev</command>
       </action>
     </keybind>
+    <keybind key="XF86Mail">
+      <action name="Execute">
+        <command>thunderbird</command>
+      </action>
+    </keybind>
+    <keybind key="XF86Explorer">
+      <action name="Execute">
+        <command>thunar</command>
+      </action>
+    </keybind>
+    <keybind key="XF86Calculator">
+      <action name="Execute">
+        <command>xcalc</command>
+      </action>
+    </keybind>
     <keybind key="W-Left">
       <action name="UnmaximizeFull"/>
       <action name="MaximizeVert"/>
@@ -877,7 +892,7 @@
       </position>
       <desktop>all</desktop>
       <layer>above</layer>
-      <skip_pager>yes</skip_pager>
+      <!--<skip_pager>yes</skip_pager>-->
       <skip_taskbar>yes</skip_taskbar>
     </application>
     <!--

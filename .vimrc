@@ -43,7 +43,8 @@ filetype indent on	"filetype specific indentation
 filetype plugin on	"filetype specific plugins
 set omnifunc=syntaxcomplete#Complete	"turn on omni complete (use ^X^O to activate)
 
-colorscheme candycode "set colorscheme (candycode)
+"colorscheme candycode "set colorscheme (candycode)
+colorscheme torte
 
 "==================================================
 "spell checking
@@ -57,7 +58,7 @@ endif
 "==================================================
 "status line
 set laststatus=2 "show status line
-let &stl=" %.100f %#todo#[%{strlen(&fenc)?&fenc:'NOENC'}%Y]%#error#%r%*"	"status left (file info)
+let &stl=" %.100f %#todo#[%{strlen(&fenc)?&fenc:'NOENC'}%Y]%*%{fugitive#statusline()}%#error#%r%*"	"status left (file info)
 let &stl.="%=%#error#%m%*%{WordCount()}[%04c|%04l/%04L]%P"	"status right (cursor info)
 
 "==================================================
