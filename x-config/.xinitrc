@@ -1,5 +1,6 @@
-#!/bin/bash
+#!/bin/sh
 
+source ~/.xheads/twin-heads.sh &
 #load custom key configuration
 #setxkbmap -layout "gb"
 xmodmap ~/.Xmodmap &
