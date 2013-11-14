@@ -14,16 +14,15 @@ URxvt*fading:		20
 !URxvt*fadeColor:	#002B36
 URxvt*fadeColor:	#363636
 !bell settings
-URxvt*visualBell:	true
+!URxvt*visualBell:	true
 URxvt*urgentOnBell:	true
 !color scheme adjustments
 URxvt*foreground:	    #E2A302
 	URxvt*color2:	#009900
 	URxvt*color4:	#3465A4
 	URxvt*color12:	#729FCF
-
 !font settings
-URxvt*font: xft:DejaVu Sans Mono:pixelsize=12,xft:Luxi Mono
+URxvt*font: xft:DejaVu Sans Mono for Powerline:pixelsize=9,xft:Luxi Mono
 URxvt*letterSpace:	-1
 
 URxvt*iconFile: /usr/share/icons/gnome/scalable/apps/utilities-terminal-symbolic.svg
@@ -33,7 +32,8 @@ URxvt*iconFile: /usr/share/icons/gnome/scalable/apps/utilities-terminal-symbolic
 URxvt*pointerBlank:	true
 
 !window shape
-URxvt*geometry:		97x25
+URxvt*geometry:		116x33
+!97x25
 !scroll settings
 URxvt*scrollBar_right:	true
 URxvt*scrollstyle:	plain
@@ -41,8 +41,10 @@ URxvt*scrollTtyOutput:	false
 URxvt*scrollWithBuffer:	true
 URxvt*scrollTtyKeypress:true
 !URxvt*scrollBar:	false
-!history limit
-URxvt*saveLines:	512
+!history limit (default 64)
+!URxvt*saveLines:	512
+
+URxvt*pastableTabs:	true
 
 !disable perl extensions (excepting matcher, fullscreen and vtwheel)
 URxvt*perl-ext:
