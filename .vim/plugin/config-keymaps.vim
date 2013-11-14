@@ -18,7 +18,5 @@ imap <tab> <c-r>=InsertTabWrapper()<CR>
 
 "map w!! to hack for write as sudo
 cmap w!! w !sudo tee > /dev/null % <CR>
-"map wt to write & compile LaTeX
-cmap wt w \| !comptex % <CR>
 "map tt to TlistToggle for switching taglist
 cmap tt TlistToggle <CR>

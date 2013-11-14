@@ -59,10 +59,11 @@ In order to maintain clarity in my .vimrc file I have outsourced some of my vim 
 
 ### vim plugins
 The plugins written by other people that I use are as follows:
-* [NERDTree] (http://www.vim.org/scripts/script.php?script_id=1658)
+* [NERDTree] (http://www.vim.org/scripts/script.php?script_id=1658) ([github] (https://github.com/scrooloose/nerdtree))
 * [taglist] (http://www.vim.org/scripts/script.php?script_id=273) ([github] (https://github.com/vim-scripts/taglist.vim))
 * [AutoClose] (http://www.vim.org/scripts/script.php?script_id=2009)
-* [fugitive] (http://www.vim.org/scripts/script.php?script_id=2975)
+* [fugitive] (http://www.vim.org/scripts/script.php?script_id=2975) ([github] (https://github.com/tpope/vim-fugitive))
+* [airline] (http://www.vim.org/scripts/script.php?script_id=4661) ([github] (https://github.com/bling/vim-airline))
 
 ### .vim/plugin/config-functions.vim
 Currently this file contains two functions:

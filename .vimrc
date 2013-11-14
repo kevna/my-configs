@@ -58,8 +58,29 @@ endif
 "==================================================
 "status line
 set laststatus=2 "show status line
-let &stl=" %.100f %#todo#[%{strlen(&fenc)?&fenc:'NOENC'}%Y]%*%{fugitive#statusline()}%#error#%r%*"	"status left (file info)
-let &stl.="%=%#error#%m%*%{WordCount()}[%04c|%04l/%04L]%P"	"status right (cursor info)
+"let &stl=" %.100f %#todo#[%{strlen(&fenc)?&fenc:'NOENC'}%Y]%*%{fugitive#statusline()}%#error#%r%*"	"status left (file info)
+"let &stl.="%=%#error#%m%*%{WordCount()}[%04c|%04l/%04L]%P"	"status right (cursor info)
+
+let g:airline_powerline_fonts=1
+
+if !exists('g:airline_symbols')
+	let g:airline_symbols = {}
+endif
+let g:airline_left_sep = ''
+let g:airline_left_alt_sep = ''
+let g:airline_right_sep = ''
+let g:airline_right_alt_sep = ''
+let g:airline_symbols.branch = ''
+let g:airline_symbols.readonly = ''
+let g:airline_symbols.paste = 'ρ'
+
+let g:airline_section_z = '%{WordCount()}[%04c|%04l/%04L]%P'
+
+let g:airline#extensions#tabline#enabled = 1
+let g:airline#extensions#tabline#left_sep = ''
+
+let g:airline_theme='murmur'
+set ttimeoutlen=50
 
 "==================================================
 "load NERDTree
