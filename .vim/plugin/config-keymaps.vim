@@ -4,6 +4,7 @@
 "maps using leader
 let mapleader = ","
 map <leader>n	:NERDTreeToggle %:p:h<CR>
+map <leader>p	:set paste!<CR>
 
 "--------------------------------------------------
 "insert mode keymaps
@@ -34,6 +35,6 @@ vnoremap ; :
 "command keymaps
 
 "map w!! to hack for write as sudo
-cmap w!!	w !sudo tee > /dev/null % <CR>
+cmap w!!	w !sudo tee > /dev/null %<CR>
 "map tt to TlistToggle for switching taglist
-cmap tt		TlistToggle <CR>
+cmap tt		TlistToggle<CR>
