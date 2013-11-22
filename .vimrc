@@ -51,7 +51,6 @@ colorscheme torte
 
 if v:version >= 700
 	setlocal spell spelllang=en
-	nmap ss :set spell!<CR>
 	set nospell
 endif
 
@@ -63,6 +62,21 @@ set laststatus=2 "show status line
 
 let g:airline_powerline_fonts=1
 
+
+let g:airline_mode_map = {
+	\ '__' : '-',
+	\ 'n'  : 'N',
+	\ 'i'  : 'I',
+	\ 'R'  : 'R',
+	\ 'c'  : 'C',
+	\ 'v'  : 'V',
+	\ 'V'  : 'Vl',
+	\ '' : 'Vb',
+	\ 's'  : 'S',
+	\ 'S'  : 'S',
+	\ '' : 'S',
+	\ }
+
 if !exists('g:airline_symbols')
 	let g:airline_symbols = {}
 endif
@@ -73,8 +87,10 @@ let g:airline_right_alt_sep = ''
 let g:airline_symbols.branch = ''
 let g:airline_symbols.readonly = ''
 let g:airline_symbols.paste = 'ρ'
+let g:airline_symbols.whitespace = 'Ξ'
+let g:airline_symbols.linenr = ''
 
-let g:airline_section_z = '%{WordCount()}[%04c|%04l/%04L]%P'
+let g:airline_section_z = '%{WordCount()} %03c:%03l/%03L'
 
 let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#tabline#left_sep = ''
