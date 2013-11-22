@@ -12,8 +12,13 @@ alias lsa="ls -a"
 #underscore emulates sudo
 alias _="sudo"
 alias _!="sudo !!"
-alias _sys="sudo systemctl"
+alias _s="sudo systemctl"
+alias _w="sudo wifi-menu"
+alias _n="sudo netctl"
 alias packer="packer-color"
+#git ailiases
+alias gitc="git checkout"
+alias gits="git status -s"
 
 #add EDITOR variable
 export EDITOR="vim"
