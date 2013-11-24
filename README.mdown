@@ -67,7 +67,7 @@ The plugins written by other people that I use are as follows:
 * [airline] (http://www.vim.org/scripts/script.php?script_id=4661) ([github] (https://github.com/bling/vim-airline))
 
 ### .vim/plugin/config-functions.vim
-Currently this file contains two functions:
+Currently this file contains three functions:
 * WordCount allows me to see a count of words in the current file (used in my status line)
 * NERDTreeQuit is a hack to auto-close the NERDTree plugin if it is the last window to remain open
 * InsertTabWrapper is a wrapper function for the tab command, if there is text immediately to the left it attempts to complete it, else it inserts a tab character
