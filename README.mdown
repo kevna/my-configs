@@ -30,7 +30,6 @@ Features in my rc.xml include:
 .bashrc
 -------
 ![vim screenshot] (http://raw.github.com/kevna/my-configs/master/terminal-screenshot.png)
-An example of my two line bash prompt can be seen in "terminal-screenshot.png".<br />
 The prompt can be read as follows:<br />
 user(virtualTerminal:backgroundProcessCount)@hostname[battery]:directory ∓branch(changes)<br />
 |-errorCode-historyNumber--
