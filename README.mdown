@@ -74,12 +74,21 @@ Currently this file contains three functions:
 
 ### .vim/plugin/config-keymaps.vim
 This file holds all the keymaps I use in my vim configuration:
+* <leader> keymaps
+	- leader is set to ','
+	- <leader> n toggles NERDTree
+	- <leader> p toggles paste
 * insert mode
 	- jj switches to command mode (w)rites the file and returns to insert mode
-	- Tab calls the InsertTabWrapper function for completion (can be bypassed by using Shift-Tab)
+	- Tab calls the InsertTabWrapper function for completion (can be bypassed by using Shift-Tab if you wish to insert a Tab after text)
+* 'normal' mode
+	- ss toggles spell-checking on or off (if version > 7)
+	- ; mapped to : (because this is a normal NOT command mode keymap it only affects the first ; pressed)
+	- unmapped cursor-keys (forcing use of hjkl for navigation)
+* visual mode
+	- ; mapped to : (as above)
 * command mode
 	- w!! writes the file using the 'write as sudo' hack
-	- wt writes the file and automatically compiles it using my [comptex script] [3]
 	- tt toggles Tlist on or off
 
 ### .vim/colors/candycode.vim
