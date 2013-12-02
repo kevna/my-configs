@@ -19,6 +19,7 @@ alias packer="packer-color"
 #git ailiases
 alias gitc="git checkout"
 alias gits="git status -s"
+alias v="vim"
 
 #add EDITOR variable
 export EDITOR="vim"
@@ -29,7 +30,7 @@ if [[ $- == *i* ]]; then
 	#modify prompt
 	#set prompt-drawing variables
 	lineColour="\[\e[0;37m\]"
-	gitThing="\$(if [[ \$gitB != \"\" ]]; then echo \" \[\e[1;44m\]\342\210\223\[\e[0;34m\]\$(echo -n \"\$(echo \"\$gitB\" | grep \* | sed s/[^a-z\-]//g)\"; echo -n \"(\$(git status -s | wc -l ))\" )${lineColour}\"; fi)"
+	gitThing="\$(if [[ \$gitB != \"\" ]]; then echo \" \[\e[1;44m\]\342\210\223\[\e[0;34m\]\$(echo -n \"\$(echo \"\$gitB\" | grep \* | sed s/[^a-z\-]//g)\"; echo -n \"(\$(git status -s | grep -vc \"^[MRDA] \" ))\" )${lineColour}\"; fi)"
 	topLeft="\342\224\214"
 	leftTee="\342\224\234"
 	theLine="\342\224\200"
