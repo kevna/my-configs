@@ -25,7 +25,7 @@ URxvt*foreground:	    #E2A302
 URxvt*font: xft:DejaVu Sans Mono for Powerline:pixelsize=9,xft:Luxi Mono
 URxvt*letterSpace:	-1
 
-URxvt*iconFile: /usr/share/icons/gnome/scalable/apps/utilities-terminal-symbolic.svg
+!URxvt*iconFile: /usr/share/icons/gnome/scalable/apps/utilities-terminal-symbolic.svg
 !URxvt*cursorBlink:	true
 !URxvt*cursorUnderline:	true
 !hide Xcursor on type
@@ -42,14 +42,16 @@ URxvt*scrollWithBuffer:	true
 URxvt*scrollTtyKeypress:true
 !URxvt*scrollBar:	false
 !history limit (default 64)
-!URxvt*saveLines:	512
+URxvt*saveLines:	512
 
 URxvt*pastableTabs:	true
 
 !disable perl extensions (excepting matcher, fullscreen and vtwheel)
 URxvt*perl-ext:
-URxvt*perl-ext-common:	matcher,fullscreen,vtwheel
+URxvt*perl-ext-common:	matcher,fullscreen,vtwheel,font-size
 !extention config
+	URxvt*keysym.C-Up:	perl:font-size:increase
+	URxvt*keysym.C-Down:	perl:font-size:decrease
 !	keyshortcut for fullscreen
 	URxvt*keysym.F11:	perl:fullscreen:switch
 !	browser to launch urls (matcher)
