@@ -31,6 +31,6 @@ elif [ "$batState" == "Discharging" ]; then
 fi
 
 #add the battery value to the string
-returnString=${returnString}${batValue}
+returnString="${returnString}${batValue}\e[m"
 #output the string (with substitution for colours)
 echo -e $returnString
