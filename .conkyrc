@@ -1,0 +1,96 @@
+# Conky, a system monitor, based on torsmo
+#
+# Any original torsmo code is licensed under the BSD license
+#
+# All code written since the fork of torsmo is licensed under the GPL
+#
+# Please see COPYING for details
+#
+# Copyright (c) 2004, Hannu Saransaari and Lauri Hakkarainen
+# Copyright (c) 2005-2010 Brenden Matthews, Philip Kovacs, et. al. (see AUTHORS)
+# All rights reserved.
+#
+# This program is free software: you can redistribute it and/or modify
+# it under the terms of the GNU General Public License as published by
+# the Free Software Foundation, either version 3 of the License, or
+# (at your option) any later version.
+#
+# This program is distributed in the hope that it will be useful,
+# but WITHOUT ANY WARRANTY; without even the implied warranty of
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+# GNU General Public License for more details.
+# You should have received a copy of the GNU General Public License
+# along with this program.  If not, see <http://www.gnu.org/licenses/>.
+#
+
+alignment top_right
+background no
+border_width 1
+cpu_avg_samples 2
+default_color white
+default_outline_color white
+default_shade_color white
+draw_borders no
+draw_graph_borders yes
+draw_outline no
+draw_shades no
+use_xft yes
+xftfont DejaVu Sans Mono:size=9
+gap_x 5
+gap_y 60
+#minimum_size 5 5
+net_avg_samples 2
+no_buffers yes
+out_to_console no
+out_to_stderr no
+extra_newline no
+own_window yes
+own_window_class Conky
+own_window_type override
+own_window_transparent yes
+own_window_argb_visual yes
+own_window_argb_value 255
+stippled_borders 0
+update_interval 1.0
+uppercase no
+use_spacer none
+show_graph_scale no
+show_graph_range no
+double_buffer yes
+
+TEXT
+$alignr ${color grey}$nodename ${color}-$kernel
+$alignr ${color 4D4D4D}|  
+$alignr ${color slate grey}time ${color 4D4D4D}--|  
+$alignr ${color 1793D1}${time %T} ${color 4D4D4D}--|    |  
+$alignr ${color}${time %F} ${color 4D4D4D}--|    |  
+$alignr ${color grey}$uptime ${color 4D4D4D}--'    |  
+$alignr ${color 4D4D4D}|  
+$alignr ${color slate grey}sys ${color 4D4D4D}--|  
+$alignr ${color}${cpu cpu0}% ${color slate grey}${acpitemp}° ${color grey}CPU ${color 4D4D4D}--|    |  
+$alignr ${color 1793D1}${cpu cpu1}% ${color slate grey}01 ${color 4D4D4D}--|    |    |  
+$alignr ${color 1793D1}${cpu cpu2}% ${color slate grey}02 ${color 4D4D4D}--|    |    |  
+$alignr ${color 1793D1}${cpu cpu3}% ${color slate grey}03 ${color 4D4D4D}--|    |    |  
+$alignr ${color 1793D1}${cpu cpu4}% ${color slate grey}04 ${color 4D4D4D}--'    |    |  
+$alignr ${color 4D4D4D}|    |  
+$alignr ${color grey}processes ${color 4D4D4D}--'    |  
+$alignr ${color}$processes  ${color slate grey}loaded ${color 4D4D4D}--|         |  
+$alignr ${color 1793D1}$running_processes ${color slate grey}running ${color 4D4D4D}--'         |  
+$alignr ${color 4D4D4D}|  
+$alignr ${color slate grey}net ${color 4D4D4D}--|  
+$alignr ${color}${tcp_portmon 1 65535 count} ${color grey}connections ${color 4D4D4D}--|    |  
+$alignr ${color 1793D1}${tcp_portmon 22 22 count} ${color slate grey}ssh ${color 4D4D4D}--'    |    |  
+$alignr ${color 4D4D4D}|    |  
+$alignr ${color}$upspeed   ${color grey}up ${color 4D4D4D}--|    |  
+$alignr ${color}$downspeed ${color grey}down ${color 4D4D4D}--'    |  
+$alignr ${color 4D4D4D}|  
+$alignr ${color slate grey}res ${color 4D4D4D}--'  
+$alignr ${color}${diskio_read}  ${color grey}read ${color 4D4D4D}--|       
+$alignr ${color}${diskio_write} ${color grey}write ${color 4D4D4D}--|       
+$alignr ${color 4D4D4D}|       
+$alignr ${color}$memperc% ${color grey}RAM ${color 4D4D4D}--|       
+$alignr ${color}$swapperc% ${color grey}SWP ${color 4D4D4D}--|       
+$alignr ${color 4D4D4D}|       
+$alignr ${color}$fs_used_perc% ${color grey}root ${color 4D4D4D}--'       
+$alignr ${color slate grey}${fs_used /}/${fs_size /}         
+
