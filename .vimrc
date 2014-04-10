@@ -1,6 +1,7 @@
 "vim config
 
 set nocompatible		"don't use vi compatibility
+set shell=bash
 set mouse=a			"enable mouse interaction
 syntax enable			"activate syntax hilighting
 set showmode			"always show mode
@@ -8,6 +9,7 @@ set autoread			"watch for file changes
 set number			"turn line numbering on
 set cursorline			"show line of cursor
 set lazyredraw 			"only redraw when neccessary
+set backspace=2			"fix backspace
 set scrolloff=7			"padding for vertical scroll
 set sidescrolloff=1		"padding for horizontal scroll
 set noerrorbells		"no nasty bells
@@ -93,6 +95,7 @@ if &term != "linux"
 	let g:airline_section_z = '%{WordCount()} %03c:%03l/%03L'
 	let g:airline#extensions#tabline#enabled = 1
 	let g:airline#extensions#tabline#left_sep = ''
+	let g:airline#extensions#syntastic#enabled = 1
 
 	"let g:airline_theme='murmur'
 	let g:airline_theme="jellybeans"
