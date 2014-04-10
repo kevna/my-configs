@@ -27,10 +27,20 @@ export EDITOR="vim"
 export PATH=${PATH}:~/scripts
 
 if [[ $- == *i* ]]; then
+	function tick {
+		if [[ $1 == 0 ]]; then
+			printf "\e[1;32m\342\234\223"
+		else
+			printf "\e[1;31m%s" $1
+		fi
+	}
+	function gitChanges {
+		tick $(git status -s | grep -vc ^[ADMR])
+	}
 	#modify prompt
 	#set prompt-drawing variables
 	lineColour="\[\e[0;37m\]"
-	gitThing="\$(if [[ \$gitB != \"\" ]]; then echo \" \[\e[1;44m\]\342\210\223\[\e[0;34m\]\$(echo -n \"\$(echo \"\$gitB\" | grep \* | sed s/[^a-z\-]//g)\"; echo -n \"(\$(git status -s | grep -vc \"^[MRDA] \" ))\" )${lineColour}\"; fi)"
+	gitThing="\$(if [[ \$gitB != \"\" ]]; then echo \" \$(tick \$(git status -s | grep -vc ^[MRDA]))\$(echo \"\$gitB\" | grep \* | sed s/[^a-z\-]//g)\"; fi)"
 	topLeft="\342\224\214"
 	leftTee="\342\224\234"
 	theLine="\342\224\200"
@@ -39,7 +49,7 @@ if [[ $- == *i* ]]; then
 	#hack to get errorcode after $(script) execution
 	export PROMPT_COMMAND="errorCode=\$?; gitB=\"\$(git branch 2>/dev/null)\""
 	export PS1="${lineColour}${topLeft}${lineEnd}\[\e[1;37m\]\u${lineColour}(\[\e[0;36m\]\l${lineColour}:\[\e[0;95m\]\j${lineColour})\[\e[0;32m\]@\[\e[1;32m\]\H$(if [[ -f ~/.batstring ]]; then echo "${lineColour}[\$(~/.batstring)${lineColour}]"; fi)\[\e[0;34m\]:\[\e[1;34m\]\w${lineColour}${gitThing}
-${lineColour}${leftTee}\$(if [[ \$errorCode == 0 ]]; then echo \"${passTick}\"; else echo \"\[\e[0;91m\]\$errorCode\"; fi)${lineColour}${theLine}\!${theLine}${lineEnd}\[\e[m\]"
+${lineColour}${leftTee}\$(tick \$errorCode)${lineColour}${theLine}\!${theLine}${lineEnd}\[\e[m\]"
 	export PS2="${lineColour}${leftTee}${lineEnd}\[\e[m\]"
 	export PS4="\[\e[1;34m\]${0}${lineColour}(\[\e[1;32m\]${LINENO}${lineColour})+\[\e[m\]"
 	# remove prompt-drawing variables
