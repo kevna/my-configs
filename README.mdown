@@ -29,7 +29,7 @@ Features in my rc.xml include:
 
 .bashrc
 -------
-![vim screenshot] (http://raw.github.com/kevna/my-configs/master/terminal-screenshot.png)
+![term screenshot] (http://raw.github.com/kevna/my-configs/master/terminal-screenshot.png)
 The prompt can be read as follows:<br />
 user(virtualTerminal:backgroundProcessCount)@hostname[battery]:directory ∓branch(changes)<br />
 |-errorCode-historyNumber--
@@ -65,6 +65,8 @@ The plugins written by other people that I use are as follows:
 * [AutoClose] (http://www.vim.org/scripts/script.php?script_id=2009)
 * [fugitive] (http://www.vim.org/scripts/script.php?script_id=2975) ([github] (https://github.com/tpope/vim-fugitive))
 * [airline] (http://www.vim.org/scripts/script.php?script_id=4661) ([github] (https://github.com/bling/vim-airline))
+* syntastic
+* YouCompleteMe
 
 ### .vim/plugin/config-functions.vim
 Currently this file contains three functions:
@@ -77,10 +79,12 @@ This file holds all the keymaps I use in my vim configuration:
 * <leader> keymaps
 	- leader is set to ','
 	- <leader> n toggles NERDTree
+	- <leader> t toggles TagList
 	- <leader> p toggles paste
 * insert mode
 	- jj switches to command mode (w)rites the file and returns to insert mode
 	- Tab calls the InsertTabWrapper function for completion (can be bypassed by using Shift-Tab if you wish to insert a Tab after text)
+		+ this feature now depreciated with introduction of YouCompleteMe plugin.
 * 'normal' mode
 	- ss toggles spell-checking on or off (if version > 7)
 	- ; mapped to : (because this is a normal NOT command mode keymap it only affects the first ; pressed)
@@ -90,6 +94,7 @@ This file holds all the keymaps I use in my vim configuration:
 * command mode
 	- w!! writes the file using the 'write as sudo' hack
 	- tt toggles Tlist on or off
+		+ this feature now depreciated (moved to <leader> mapping)
 
 ### .vim/colors/candycode.vim
 In majority this is the standard [candycode] [4] color scheme which is designed for use with gvim.
