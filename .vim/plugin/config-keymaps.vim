@@ -5,6 +5,7 @@
 let mapleader = ","
 map <leader>n	:NERDTreeToggle %:p:h<CR>
 map <leader>p	:set paste!<CR>
+map <leader>t	:TlistToggle<CR>
 
 "--------------------------------------------------
 "insert mode keymaps
@@ -12,7 +13,7 @@ map <leader>p	:set paste!<CR>
 "map jj in insert mode to write file (save)
 imap jj		<esc>:w<CR><ins><Right>
 "map tab to autocomplete wrapper function
-imap <tab>	<c-r>=InsertTabWrapper()<CR>
+"imap <tab>	<c-r>=InsertTabWrapper()<CR>
 
 "--------------------------------------------------
 "'normal' mode keymaps
@@ -36,5 +37,3 @@ vnoremap ; :
 
 "map w!! to hack for write as sudo
 cmap w!!	w !sudo tee > /dev/null %<CR>
-"map tt to TlistToggle for switching taglist
-cmap tt		TlistToggle<CR>
