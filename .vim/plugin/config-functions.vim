@@ -4,6 +4,12 @@
 "--------------------------------------------------
 "wordcount function
 function! WordCount()
+"	if &filetype == "tex"
+"		if &modified || !exists("g:texcount")
+"			let g:texcount = system("echo -n `detex " . shellescape(bufname("%")) . " |wc -w`")
+"		endif
+"		return g:texcount
+"	endif
 	let s:old_status = v:statusmsg
 	let position = getpos(".")
 	exe "silent normal g\<c-g>"
@@ -40,7 +46,7 @@ function! NERDTreeQuit()
 			endif
 		endif
 	endfor
-	
+
 	if (!windowfound)
 		quitall
 	endif
