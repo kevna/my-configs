@@ -3,9 +3,9 @@
 
 "maps using leader
 let mapleader = ","
-map <leader>n	:NERDTreeToggle %:p:h<CR>
+map <leader>e	:VimFilerExplorer<CR>
 map <leader>p	:set paste!<CR>
-map <leader>t	:TlistToggle<CR>
+map <leader>t	:TagbarToggle<CR>
 
 "--------------------------------------------------
 "insert mode keymaps
