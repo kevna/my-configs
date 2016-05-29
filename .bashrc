@@ -1,3 +1,5 @@
+# beep
+alias beep='paplay /usr/share/sounds/freedesktop/stereo/bell.oga'
 #iso date/time
 alias isotime='notify-send "$(date +%Y-%m-%dT%H:%MZ)"'
 #vlc commandline
@@ -27,6 +29,7 @@ export EDITOR="vim"
 export PATH=${PATH}:~/scripts
 
 if [[ $- == *i* ]]; then
+	/usr/bin/fish && exit
 	function tick {
 		if [[ $1 == 0 ]]; then
 			printf "\e[1;32m\342\234\223"
